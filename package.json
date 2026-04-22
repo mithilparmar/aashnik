@@ -2,7 +2,7 @@
   "name": "aashnik",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mithilparmar.github.io/aashnik",
+  "homepage": "https://www.aashnik.com",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
