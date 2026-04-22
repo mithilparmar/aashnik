@@ -1,0 +1,151 @@
+.phone {
+    font-weight: bold;
+    text-align: center;
+        a {
+            color: #dfd8c8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+    
+            &:hover {
+              color: #252523; 
+            }
+        }
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+
+  ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          margin-bottom: 10px;
+          opacity: 0;
+          overflow: hidden;
+          display: block;
+          clear: both;
+          position: relative;
+          animation: fadeInUp 2s 2s;
+          animation-fill-mode: forwards;
+          border-radius: 0 !important;
+      }
+
+      li.half {
+          width: 49%;
+          margin-right: 2%;
+          float: left;
+          clear: none;
+          border-radius: 0 !important;
+
+      }
+
+      li.email {
+        margin-right: 0%;
+      }
+  }
+
+
+  .placeText::placeholder {
+      color: #fff;
+      opacity: 0.5;
+  }
+
+  input[type='text'],
+  input[type='email'],
+  input[type='tel'] {
+      width: 100%;
+      border: 0;
+      background: rgba(223, 216, 200, 0.212);
+      font-family: 'Noto Sans JP';
+      height: 50px;
+      font-size: 15px;
+      padding: 0 20px;
+      box-sizing: border-box;
+      border-radius: 0 !important;
+  }
+
+  select {
+        appearance: none;
+        border-radius: 0 !important;
+        width: 100%;
+        border: 0;
+        background: rgba(223, 216, 200, 0.212);
+        font-family: 'Noto Sans JP';
+        height: 50px;
+        font-size: 15px;
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin-right: 15x;
+
+        background-image: url('../../assets/dropdown_arrow.svg'); /* Add your own SVG or PNG file */
+        background-repeat: no-repeat;
+        background-position: right 10px center; /* Position of the custom arrow */
+        background-size: 20px; /* Adjust size to your liking */
+        padding-right: 30px; /* Padding to make space for custom arrow */
+      
+      option {
+        padding: 0;
+      }
+
+      &:invalid {
+        color: rgba(255, 255, 255, 0.5);
+      }
+  }
+
+  textarea {
+      width: 100%;
+      border: 0;
+      background: rgba(223, 216, 200, 0.212);
+      font-family: 'Noto Sans JP';
+      height: 50px;
+      font-size: 16px;
+      padding: 20px;
+      box-sizing: border-box;
+      min-height: 150px;
+      border-radius: 0 !important;
+  }
+
+  .flat-button {
+      color: #252523;
+      font-size: 13px;
+      width: 100px;
+      letter-spacing: 3px;
+      text-decoration: none;
+      padding: 8px 10px;
+      border: 1px solid #252523;
+      float: left;
+      border-radius: 4px;
+      background: 0 0;
+      text-transform: uppercase;
+      float: right;
+      text-align: center;
+      margin-right: 0px;
+
+      &:hover {
+          background: #252523;
+          color: #dfd8c8;
+      }
+  }
+
+  input[type='text']:focus,
+  input[type='email']:focus,
+  input[type='tel']:focus,
+  select:focus,
+  textarea:focus {
+      outline: none;
+      border: 1px solid #252523;
+  }
+}

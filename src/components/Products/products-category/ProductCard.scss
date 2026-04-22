@@ -1,0 +1,45 @@
+.product-card {
+    text-align: center;
+    margin: 20px;
+    width: 250px;
+    color: #dfd8c8;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    h3 {
+        font-size: 24px;
+        margin: auto;
+    }
+
+    p {
+        font-size: 14px;
+        margin: auto;
+        font-family: 'Noto Sans JP', 'sans-serif';
+        white-space: pre-wrap;
+    }
+
+    .explore-button {
+        display: inline-block;
+        margin-top: 10px;
+        border-radius: 0.25rem;
+        padding: 5px 10px;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 12px;
+        font-weight: lighter;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+        border: 1px solid;
+        border-radius: 2rem;
+        color: #dfd8c8;
+        border-color: #dfd8c8;
+
+        &:hover {
+            color: #31251d;
+            background-color: #dfd8c8;
+        }
+    }
+}

@@ -1,0 +1,145 @@
+.sitemap {
+    background-color: #252523;
+    padding: 40px 0 0 0;
+    width: 100%;
+    font-family: 'Noto Sans JP', sans-serif;
+  
+    &__container {
+        display: flex;
+        justify-content: center;
+        max-width: 600px;
+        margin: 0 auto;
+        gap: 100px;
+        text-align: center;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        gap: 0;
+        text-align: center;
+        margin-top: 30px;
+        padding: 20px;
+        font-size: 15px;
+        font-weight: 500;
+        border-top: 1px solid #a39274;
+
+        a {
+            color: #a39274;
+            text-decoration: none;
+            transition: color 0.3s ease;
+    
+            &:hover {
+              color: #dfd8c8;
+            }
+          }
+    }
+  
+    &__column {
+        flex: 1;
+        font-size: 15px;
+        min-width: 200px;
+        text-align: left;
+        line-height: 22px;
+    }
+  
+    &__heading {
+        opacity: 0.5;
+        font-size: 15px;
+        margin-bottom: 15px;
+        color: #a39274;
+    }
+  
+    &__links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-weight: 500;
+  
+      li {
+        margin-bottom: 5px;
+  
+        a {
+          color: #a39274;
+          text-decoration: none;
+          transition: color 0.3s ease;
+  
+          &:hover {
+            color: #dfd8c8; 
+          }
+        }
+      }
+    }
+  
+    &__social {
+      display: flex;
+      justify-content: left;
+      gap: 15px;
+      margin: 5px 0;
+
+      a {
+        padding: 0 10px 0 0;
+        display: block;
+        font-size: 30px;
+        line-height: 30px;
+
+        &:hover svg {
+            color: #dfd8c8;
+        }
+        }
+    }
+
+    &__address,
+    &__phone {
+        font-weight: 500;
+        a {
+            color: #a39274;
+            text-decoration: none;
+            transition: color 0.3s ease;
+    
+            &:hover {
+              color: #dfd8c8; 
+            }
+        }
+    }
+  
+    a[href^="tel"] {
+      display: block;
+      color: #a39274;
+      margin-top: 5px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: #dfd8c8;
+      }
+    }
+  
+    p {
+      color: #a39274;
+      margin: 5px 0;
+    }
+
+
+
+
+
+    @media (max-width: 1200px) {
+        &__container {
+            flex-direction: column; /* Stack columns vertically */
+            gap: 20px; /* Adjust spacing between each column */
+            padding: 0 20px; /* Add padding for mobile */
+        }
+    
+        &__column {
+            text-align: center; /* Center-align text for smaller screens */
+            min-width: 100%; /* Ensure columns take up full width */
+        }
+    
+        &__social {
+            justify-content: center; /* Center-align social icons */
+        }
+    }
+}

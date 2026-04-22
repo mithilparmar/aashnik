@@ -1,0 +1,66 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; // Ensures layout takes up full height of the viewport
+  
+    &__content {
+      flex: 1; // Allows the content area to grow, pushing the footer down
+      padding: 20px;
+    }
+}
+
+.text-zone {
+  font-size: 20px;
+  margin: 150px auto 0 auto;
+  position: relative;
+  width: 1000px;
+  text-align: justify;
+  justify-content: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+}
+
+.container {
+    width: 100%;
+    opacity: 0;
+    margin: 0 auto;
+    z-index: 1;
+    transform-style: preserve-3d;
+    animation: fadeIn 1s forwards;
+    animation-delay: 1s;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: 'exotc350_bd_btbold';
+  font-weight: 100;
+  position: relative;
+  padding-bottom: 10px;
+
+  &::after {
+    content: ""; // Creates an empty content box
+    display: block;
+    width: 300px; // Adjust to your desired line length
+    height: 3px; // Thickness of the line
+    background-color: #31251d; // Set to your preferred color
+  }
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+  .text-zone {
+    width: 100%;
+    margin: 100px auto 0 auto;
+  }
+
+  h1 {
+    font-size: 30px;
+    &::after {
+      width: 200px; // Adjust to your desired line length
+      height: 2px; // Thickness of the line
+    }
+  }
+}

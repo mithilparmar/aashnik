@@ -1,0 +1,127 @@
+.category-page {
+    margin: 100px -20px auto;
+    font-family: 'Noto Sans JP', sans-serif;
+
+    .category-header-image {
+        position: relative;
+        text-align: center;
+
+        img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+        }
+
+        // Overlay layer with 50% black opacity
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); // Black overlay with 50% opacity
+            z-index: 1;
+        }
+
+        // Text layer on top of the overlay
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #dfd8c8; // White text color for contrast
+            font-size: 48px;
+            font-family: 'exotc350_bd_btbold';
+            font-weight: 500;
+            z-index: 2; // Ensure text is above the overlay
+            text-align: center;
+        }
+    }
+
+    .category-header {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #dfd8c8;
+        font-family: 'Noto Sans JP', 'sans-serif';
+    }
+
+    .category-title {
+        font-size: 30px;
+        font-family: 'exotc350_bd_btbold';
+        font-weight: 100;
+        position: relative;
+        padding-bottom: 10px;
+        margin: 0;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 300px;
+            height: 3px;
+            background-color: #31251d;
+            margin: 5px auto 0;
+        }
+    }
+
+    .category-subtitle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'exotc350_bd_btbold';
+        font-weight: 300;
+        font-size: 30px;
+        margin: 30px auto;
+        color: #31251d;
+        max-width: 1200px;
+
+        &::before,
+        &::after {
+            content: "";
+            flex-grow: 1; // Makes the line expand to fill available space
+            height: 3px;
+            background-color: #31251d;
+            margin: auto 10px; // Space between line and text
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .category-page {
+        margin: auto -20px;
+
+        .category-header-image {
+
+            img {
+                height: 400px;
+            }
+
+            .overlay-text {
+                font-size: 32px;
+                width: 100%;
+            }
+        }
+
+        .category-title {
+
+            &::after {
+                content: "";
+                display: block;
+                width: 200px;
+                height: 2px;
+                background-color: #31251d;
+                margin: 5px auto 0;
+            }
+        }
+
+        .category-subtitle {
+            text-align: center;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,507 @@
+.container-gallery,
+.container_next {
+	
+	.react-fullscreen-slideshow-modal-gallery {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #252523;
+		margin: auto;
+	}
+
+	.react-fullscreen-slideshow-preview-bottom-text {
+		position: absolute;
+		left: 50px;
+		color: white;
+	}
+
+	.react-fullscreen-slideshow-preview-overlay {
+		position: absolute;
+		bottom: 0;
+		width: 100% !important;
+		background-color: #252523b4;
+	}
+
+	.react-fullscreen-slideshow-preview-bottom-pane {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		width: 100%;
+	}
+
+	.react-fullscreen-slideshow-photos-box-icon {
+		position: absolute;
+		left: 15px;
+	}
+
+	.react-fullscreen-slideshow-modal-gallery img {
+		max-width: 100%;
+		max-height: inherit;
+		cursor: pointer;
+	}
+
+	.react-fullscreen-slideshow-modal-wrapper {
+		display: none;
+		position: fixed;
+		z-index: 100;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #252523;
+	}
+
+	.react-fullscreen-slideshow-modal {
+		width: 100%;
+		height: 100%;
+		background-color: #252523;
+		overflow-y: hidden;
+	}
+
+	.react-fullscreen-slideshow-modal-blur {
+		width: 100%;
+		height: 100%;
+		background-color: rgb(18, 18, 18);
+		overflow-y: hidden;
+		filter: blur(30px);
+	}
+
+	.react-fullscreen-slideshow-modal-content {
+		margin: auto;
+		padding: 0;
+		height: 75%;
+		display: flex;
+		flex-wrap: wrap;
+		/* background:linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); */
+		background-color: #252523;
+	}
+
+	.react-fullscreen-slideshow-modal-top {
+		border-bottom: 3px solid #dfd8c8;
+		height: 10%;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: 'Noto Sans JP', sans-serif;
+	}
+
+	.react-fullscreen-slideshow-modal-bottom {
+		border-top: 3px solid #dfd8c8;
+		min-height: 15vh;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		justify-content: center;
+		align-items: center;
+		font-family: 'Noto Sans JP', sans-serif;
+	}
+
+	.react-fullscreen-slideshow-close {
+		color: #dfd8c8;
+		position: absolute;
+		left: 25px;
+		font-size: 35px;
+		font-weight: bold;
+		display: none;
+	}
+
+	.react-fullscreen-slideshow-close-view-all {
+		position: absolute;
+		right: 25px;
+		top: 20px;
+		font-size: 40px;
+		text-align: right;
+		display: block;
+	}
+
+	.react-fullscreen-slideshow-close:hover,
+	.react-fullscreen-slideshow-close:focus,
+	.react-fullscreen-slideshow-close-text:hover,
+	.react-fullscreen-slideshow-close-text:focus,
+	#react-fullscreen-slideshow-view-slides-link:hover,
+	#react-fullscreen-slideshow-view-slides-link:focus {
+		color: #a39274;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	.react-fullscreen-slideshow-view-all-thumbnails img {
+		margin: 2px;
+		/* max-width: 9vw; */
+		max-height: 8vh;
+		background: rgba(0, 0, 0, 0.5);
+	}
+
+	.react-fullscreen-slideshow-slides {
+		height: 100%;
+		display: flex;
+		margin-top: 0;
+		margin-bottom: 0;
+		justify-content: center;
+		align-items: center;
+		flex: 10 0 65%;
+		/* border-right: 1px solid rgba(255, 255, 255, 0.1);*/
+	}
+
+	.react-fullscreen-slideshow-slides img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	.react-fullscreen-slideshow-view-all-modal-content {
+		height: 100%;
+		width: 75%;
+		display: flex;
+		margin: auto;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column;
+	}
+
+	.react-fullscreen-slideshow-view-all-gallery-name {
+		color: #dfd8c8;
+		width: 100%;
+		text-align: center;
+		line-height: normal;
+		margin-bottom: 20px;
+		font-family: 'Noto Sans JP', sans-serif;
+		font-size: 20px;
+	}
+
+	.react-fullscreen-slideshow-view-all-thumbnails {
+		width: 75%;
+		max-height: 75vh;
+		display: flex;
+		flex-wrap: wrap;
+		margin: auto;
+		justify-content: center;
+		align-items: center;
+		overflow-y: auto;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
+
+	.react-fullscreen-slideshow-view-all-thumbnails::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+	}
+
+	.react-fullscreen-slideshow-view-all-modal {
+		display: none;
+		position: fixed;
+		z-index: 101;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 1;
+		/*backdrop-filter: blur(30px);*/
+		opacity: 0.8;
+		overflow-y: hidden;
+	}
+
+	.react-fullscreen-slideshow-prev-mobile,
+	.react-fullscreen-slideshow-next-mobile {
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		width: auto;
+		padding: 3vw;
+		margin-top: -50px;
+		color: white;
+		font-weight: bold;
+		font-size: 20px;
+		transition: 0.6s ease;
+		border-radius: 0 3px 3px 0;
+		border: none;
+		background-color: grey;
+		opacity: 0.75;
+		user-select: none;
+		-webkit-user-select: none;
+		display: none;
+	}
+
+	.react-fullscreen-slideshow-prev,
+	.react-fullscreen-slideshow-next {
+		cursor: pointer;
+		width: auto;
+		padding: 12px;
+		font-weight: bold;
+		font-size: 20px;
+		transition: 0.6s ease;
+		user-select: none;
+		-webkit-user-select: none;
+		background: transparent;
+		border: none;
+		outline: none;
+	}
+
+	.react-fullscreen-slideshow-next-mobile {
+		right: 0;
+		border-radius: 3px 0 0 3px;
+	}
+
+	.react-fullscreen-slideshow-prev:hover,
+	.react-fullscreen-slideshow-next:hover {
+		background-color: #252523;
+	}
+
+	.react-fullscreen-slideshow-bottom-right-pane {
+		position: absolute;
+		right: 30px;
+		display: flex;
+	}
+
+	.react-fullscreen-slideshow-bottom-left-pane {
+		cursor: pointer;
+		position: absolute;
+		left: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		unicode-bidi: isolate;
+	}
+
+	.react-fullscreen-slideshow-view-all-box {
+		display: block;
+	}
+
+	.react-fullscreen-slideshow-bottom-text {
+		width: auto;
+		padding: 0 5px;
+		color: #dfd8c8 !important;
+		font-size: 15px;
+	}
+
+	.react-fullscreen-slideshow-tile-button {
+		position: relative;
+		background-color: transparent;
+		padding:0px;
+		height: 20px;
+		width: 20px;
+		-webkit-transition: opacity 0.5s cubic-bezier(0.4, 0, 0.6, 1) 0.3s;
+		transition: opacity 0.5s cubic-bezier(0.4, 0, 0.6, 1) 0.3s;
+	}
+
+	.react-fullscreen-slideshow-modal-gallery-title {
+		color: #dfd8c8;
+		font-family: 'exotc350_bd_btbold';
+		font-size: 25px;
+		font-weight: bolder;
+		max-width: 70vw;
+		text-align: center;
+	}
+
+	.react-fullscreen-slideshow-gallery-title {
+		color: #dfd8c8;
+		padding: 20px !important;
+		border-bottom: 0.25px solid #dfd8c8;
+		line-height: normal;
+		font-weight: bolder;
+		font-family: 'exotc350_bd_btbold';
+		font-size: 30px;
+		font-weight: 100;
+	}
+
+	.react-fullscreen-slideshow-tile-row {
+		height: 10px;
+		width: 100%;
+		display: flex;
+	}
+
+	.react-fullscreen-slideshow-tile-block {
+		transition: background-color 0.3s;
+		display: inline-block;
+		vertical-align: top;
+		background-color: #f7f7f7;
+		height: 8px;
+		width: 8px;
+		margin: 1px;
+	}
+
+	.react-fullscreen-slideshow-numbertext {
+		width: auto;
+		padding: 0 5px;
+		color: #dfd8c8;
+		font-size: 15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.react-fullscreen-slideshow-caption-container {
+		text-align: left;
+		background-color: #252523;
+		color: #dfd8c8;
+		font-family: 'Noto Sans JP', sans-serif;
+		font-size: 20px;
+		width: 100%;
+		flex: 1 0 0;
+		margin: 15px 15px;
+		max-height: 100%;
+		position: relative;
+		bottom: 0;
+	}
+
+	#react-fullscreen-slideshow-caption {
+		margin: 0 auto;
+		min-width: 300px;
+		max-height: 90%;
+		overflow-y: auto;
+	}
+
+	.react-fullscreen-slideshow-image-title {
+		font-weight: bold;
+	}
+
+	.react-fullscreen-slideshow-desc {
+		font-weight: normal;
+		color: #a39274;
+		padding-top: 0.75rem;
+	}
+
+	.react-fullscreen-slideshow-thumbnails-list {
+		display: flex;
+		flex-wrap: nowrap;
+	}
+
+	.react-fullscreen-slideshow-thumbnails-list img{
+		border: 3px solid #dfd8c8 !important;
+	}
+
+	.react-fullscreen-slideshow-slideshow-info {
+		padding: 20px !important;
+		font-family: 'Noto Sans JP', sans-serif;
+	}
+
+	#react-fullscreen-slideshow-photos-icon {
+		width: 30px;
+		height: 25px;
+		display: inline-block;
+		padding-right: 0.75rem;
+		vertical-align: middle;
+		color: #dfd8c8;
+		/* font-size: 0.8125rem; */
+		line-height: 0.8125rem;
+		/* font-size: 0.9375rem;
+		line-height: 0.9375rem; */
+	}
+
+	#react-fullscreen-slideshow-count {
+		color: #dfd8c8;
+		display: inline-block;
+		font-size: 15px;
+		line-height: 0.8125rem;
+		vertical-align: middle;
+		font-family: 'Noto Sans JP', sans-serif;
+	}
+
+	#react-fullscreen-slideshow-view-slides-link {
+		display: inline-block;
+		color: #dfd8c8;
+		font-size: 15px;
+		line-height: 0.8125rem;
+		padding-right: 0.75rem;
+		vertical-align: middle;
+	}
+
+	#react-fullscreen-slideshow-pipe {
+		display: inline-block;
+		color: #dfd8c8;
+		margin: 0 20px;
+		font-size: 15px;
+		line-height: 0.8125rem;
+		vertical-align: middle;
+	}
+
+	.react-fullscreen-slideshow-gallery-icon-bar {
+		display: none;
+		position: absolute;
+		bottom: 0;
+		/* right: 5px;*/
+	}
+
+	.react-fullscreen-slideshow-close-text {
+		color: #dfd8c8;
+		position: absolute;
+		left: 25px;
+		font-size: 15px;
+		display: block;
+	}
+
+	@media (max-width: 1200px) {
+		#react-fullscreen-slideshow-caption {
+			min-width: 90vw;
+		}
+		.react-fullscreen-slideshow-gallery-icon-bar {
+			display: none;
+		}
+		.react-fullscreen-slideshow-gallery-title {
+			font-size: 20px;
+		}
+		.react-fullscreen-slideshow-slides {
+			border: none;
+		}
+		#react-fullscreen-slideshow-caption {
+			/* padding-top: 20px; */
+			max-width: 90vw;
+			text-align: center;
+			font-size: 15px;
+			line-height: normal;
+		}
+		.react-fullscreen-slideshow-caption-container {
+			margin-top: 10px;
+			height: 100px;
+		}
+		.react-fullscreen-slideshow-modal-content {
+			height: 60%;
+		}
+		.react-fullscreen-slideshow-modal-bottom {
+			min-height: 12vh;
+			bottom: 0;
+			position: fixed;
+		}
+		.react-fullscreen-slideshow-thumbnails-list {
+			display: none;
+		}
+		.react-fullscreen-slideshow-widescreen-arrows {
+			display: none;
+		}
+		.react-fullscreen-slideshow-bottom-left-pane {
+			left: 0;
+			right: 0;
+		}
+		.react-fullscreen-slideshow-prev-mobile,
+		.react-fullscreen-slideshow-next-mobile {
+			display: block;
+		}
+		.react-fullscreen-slideshow-view-all-gallery-name {
+			font-size: 20px;
+		}
+		.react-fullscreen-slideshow-modal-gallery-title {
+			font-size: 20px;
+		}
+		.react-fullscreen-slideshow-close {
+			display: block;
+		}
+		.react-fullscreen-slideshow-close-text {
+			display: none;
+		}
+		.react-fullscreen-slideshow-slideshow-info {
+			padding: 2vw;
+		}
+		#react-fullscreen-slideshow-count {
+			font-size: 13px;
+		}
+		#react-fullscreen-slideshow-view-slides-link {
+			font-size: 13px;
+		}
+		#react-fullscreen-slideshow-pipe {
+			font-size: 13px;
+		}
+	}
+}

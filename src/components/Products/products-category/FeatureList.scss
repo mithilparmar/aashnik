@@ -1,0 +1,26 @@
+.feature-list {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: auto;
+    
+
+    .feature-item {
+        text-align: center;
+        width: 100px;
+        margin: 10px;
+
+        p {
+            font-family: 'Noto Sans JP', 'sans-serif';
+            font-size: 15px;
+        }
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+    }
+
+}
