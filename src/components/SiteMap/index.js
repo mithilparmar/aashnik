@@ -78,7 +78,7 @@ const Sitemap = () => {
       <br />
       <div className="sitemap__info">
         <p>
-          {"Copyright © 2024 AASH'NIK Incorporated."}
+          {"Copyright © 2026 AASH'NIK Incorporated."}
           <br />
           <br />
           {"Designed by: "}
